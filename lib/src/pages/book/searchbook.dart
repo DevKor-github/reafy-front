@@ -59,7 +59,6 @@ class _SearchBookState extends State<SearchBook> {
   }
 
   Future<SearchBookResDto> searchBooks(String query, int page) async {
-    var auth = context.read<AuthProvider>();
     final Dio authdio = authDio().getDio();
 
     try {

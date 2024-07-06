@@ -45,7 +45,7 @@ class _ItemShopState extends State<ItemShop> {
     try {
       int? coin = await getUserCoin();
       setState(() {
-        userCoin = coin ?? 0; // 널일 경우 0을 기본값으로 사용합니다.
+        userCoin = coin ?? 0;
       });
     } catch (e) {
       print('에러 발생: $e');
@@ -101,7 +101,6 @@ class _ItemShopState extends State<ItemShop> {
   //아이템 배치 저장 -> 해당 아이템 activation 값 true로
   Future<void> updateItemsActivation() async {
     try {
-      final itemProvider = Provider.of<ItemProvider>(context, listen: false);
       final itemPlacementProvider =
           Provider.of<ItemPlacementProvider>(context, listen: false);
       await postItem(itemPlacementProvider.bookshelf.selectedId, true, 0);
@@ -116,7 +115,6 @@ class _ItemShopState extends State<ItemShop> {
 
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
     final itemPlacementProvider =
         Provider.of<ItemPlacementProvider>(context, listen: false);
 

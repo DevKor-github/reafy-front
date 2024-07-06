@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:photo_view/photo_view.dart';
 import 'package:provider/provider.dart';
 import 'package:reafy_front/src/components/done.dart';
@@ -23,8 +22,6 @@ class MemoCard extends StatefulWidget {
 class _MemoCardState extends State<MemoCard> {
   @override
   Widget build(BuildContext context) {
-    final validHashtags =
-        widget.memo.hashtag.where((tag) => tag.isNotEmpty).toList();
     return Consumer<MemoProvider>(builder: (context, memoProvider, child) {
       Memo? memo;
       if (widget.type == 'board')

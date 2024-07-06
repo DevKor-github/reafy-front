@@ -286,7 +286,7 @@ class _BookDetailPageState extends State<BookDetailPage> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            bookDetails.title ?? '',
+            bookDetails.title,
             overflow: TextOverflow.clip,
             style: TextStyle(
               fontSize: 22,
@@ -309,7 +309,7 @@ class _BookDetailPageState extends State<BookDetailPage> {
               ),
               SizedBox(width: 5),
               Text(
-                bookDetails.author ?? '',
+                bookDetails.author,
                 overflow: TextOverflow.clip,
                 style: TextStyle(
                   fontSize: 12,
@@ -334,7 +334,7 @@ class _BookDetailPageState extends State<BookDetailPage> {
               ),
               SizedBox(width: 5),
               Text(
-                bookDetails.publisher ?? '',
+                bookDetails.publisher,
                 overflow: TextOverflow.clip,
                 style: TextStyle(
                   fontSize: 12,
@@ -354,11 +354,6 @@ class _BookDetailPageState extends State<BookDetailPage> {
   }
 
   Widget hyperlinkText(String? url) {
-    // 링크가 비어있지 않은지 확인하고, 필요한 처리를 합니다.
-    final String displayUrl = (url != null && url.length > 40)
-        ? '${url.substring(0, 35)}...'
-        : (url ?? '');
-
     return InkWell(
       onTap: () async {
         if (url != null && await canLaunch(url)) {

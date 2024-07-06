@@ -27,11 +27,9 @@ class _ProfileNameState extends State<ProfileName> {
   @override
   Widget build(BuildContext context) {
     setNickname();
-    final size = MediaQuery.of(context).size;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       mainAxisAlignment: MainAxisAlignment.center,
-
       children: [
         Stack(
           children: <Widget>[
@@ -52,7 +50,10 @@ class _ProfileNameState extends State<ProfileName> {
             ),
             Container(
               alignment: Alignment.center,
-              margin: EdgeInsets.only(top: 92.0, left: (SizeConfig.screenWidth - 153)/2.0, bottom: 21.53),
+              margin: EdgeInsets.only(
+                  top: 92.0,
+                  left: (SizeConfig.screenWidth - 153) / 2.0,
+                  bottom: 21.53),
               width: 153.47,
               height: 153.47,
               decoration: BoxDecoration(

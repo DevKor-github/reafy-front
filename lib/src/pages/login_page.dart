@@ -1,4 +1,3 @@
-import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:provider/provider.dart';
@@ -7,9 +6,6 @@ import 'package:reafy_front/src/components/image_data.dart';
 import 'package:reafy_front/src/controller/connectivity_controller.dart';
 import 'package:reafy_front/src/pages/intro.dart';
 import 'package:reafy_front/src/provider/auth_provider.dart';
-import 'package:reafy_front/src/utils/api.dart';
-import 'package:reafy_front/src/utils/constants.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 import 'package:sign_in_with_apple/sign_in_with_apple.dart';
 import 'package:toastification/toastification.dart';
 

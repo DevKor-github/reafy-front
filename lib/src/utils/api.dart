@@ -7,7 +7,6 @@ import 'package:provider/provider.dart';
 import 'package:reafy_front/src/provider/auth_provider.dart';
 import 'package:reafy_front/src/utils/constants.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:dio_cache_interceptor/dio_cache_interceptor.dart';
 
 AnsiPen info = AnsiPen()..blue(bold: true);
 AnsiPen success = AnsiPen()..green(bold: true);

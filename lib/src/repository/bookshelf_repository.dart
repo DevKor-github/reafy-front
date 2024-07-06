@@ -252,8 +252,7 @@ Future<bool> postBookInfo(String isbn13, int progressState) async {
 //책 삭제
 Future<void> deleteBookshelfBook(int bookshelfBookId) async {
   try {
-    final res =
-        await authdio.delete('${baseUrl}/book/bookshelf/$bookshelfBookId');
+    await authdio.delete('${baseUrl}/book/bookshelf/$bookshelfBookId');
   } catch (error) {
     throw Exception('Failed to delete book: $error');
   }
@@ -358,7 +357,7 @@ Future<void> updateBookshelfBookFavorite(
       final Map<String, dynamic> reqBody = {
         'isFavorite': isCurrentlyFavorite ? 0 : 1,
       };
-      final updateRes = await authdio.put(
+      await authdio.put(
         '${baseUrl}/book/favorite/$bookshelfBookId',
         data: reqBody,
       );

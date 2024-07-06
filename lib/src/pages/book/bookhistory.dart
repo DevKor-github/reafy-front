@@ -102,7 +102,7 @@ class _BookHistory extends State<BookHistory> {
           },
         ),
         title: Text(
-          bookTitle ?? '',
+          bookTitle,
           style: TextStyle(
               color: Color(0xff333333),
               fontWeight: FontWeight.w700,

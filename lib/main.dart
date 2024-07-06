@@ -23,7 +23,6 @@ import 'package:connectivity_plus/connectivity_plus.dart';
 import 'dart:async';
 import 'package:reafy_front/src/utils/constants.dart';
 import 'package:showcaseview/showcaseview.dart';
-import 'package:toastification/toastification.dart';
 
 Future main() async {
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();

@@ -270,34 +270,41 @@ class _NewBoardMemoState extends State<NewBoardMemo> {
           children: [
             Expanded(
               child: Container(
-                margin: EdgeInsets.symmetric(horizontal: 13),
-                width: 317,
-                child: TextField(
-                  maxLength: 500,
-                  maxLines: null,
-                  minLines: 1,
-                  controller: memoController,
-                  decoration: InputDecoration(
-                    border: InputBorder.none,
-                    hintText: '메모를 입력해 주세요.',
-                    hintStyle: TextStyle(
-                      color: Color(0xffb3b3b3),
-                      fontSize: 14,
-                      fontWeight: FontWeight.w400,
-                    ),
-                  ),
-                  style: TextStyle(
-                      color: dark_gray,
-                      fontSize: 15,
-                      fontWeight: FontWeight.w400,
-                      height: 1.3),
-                  onChanged: (text) {
-                    setState(() {
-                      currentLength = text.length;
-                    });
-                  },
-                ),
-              ),
+                  margin: EdgeInsets.symmetric(horizontal: 13),
+                  padding: EdgeInsets.symmetric(vertical: 5),
+                  width: 317,
+                  child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        TextField(
+                          //maxLength: 500,
+                          maxLines: null,
+                          minLines: 1,
+                          controller: memoController,
+                          decoration: InputDecoration(
+                            border: InputBorder.none,
+                            hintText: '메모를 입력해 주세요.',
+                            hintStyle: TextStyle(
+                              color: Color(0xffb3b3b3),
+                              fontSize: 14,
+                              fontWeight: FontWeight.w400,
+                            ),
+                          ),
+                          style: TextStyle(
+                              color: dark_gray,
+                              fontSize: 15,
+                              fontWeight: FontWeight.w400,
+                              height: 1.3),
+                          onChanged: (text) {
+                            setState(() {
+                              currentLength = text.length;
+                            });
+                          },
+                        ),
+                        Align(
+                            alignment: Alignment.bottomRight,
+                            child: Text(currentLength.toString() + '/500'))
+                      ])),
             ),
           ],
         ));
